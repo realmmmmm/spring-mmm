@@ -1,0 +1,35 @@
+server:
+  port: 80
+spring:
+  application:
+    name: feign-dept
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+    # 前端上传日期格式，定义形式
+    date-format: yyyy-MM-dd
+
+# Eureka配置：配置服务注册中心地址
+eureka:
+  client:
+    # 服务注册开关  false表示不将本消费者注册到 Eureka 服务器
+    registerWithEureka: false
+    # 服务发现，true 从 Eureka 服务器中获取注册信息
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7003.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      # defaultZone: http://localhost:7001/eureka/
+  instance:
+    instanceId: ${spring.application.name}:${server.port} # 等价于microservice-product:8001
+    prefer-ip-address: true #访问路径就会显示成IP地址
+
+#info配置 http://xxxx/actuator/info 访问信息
+info:
+  app.name: springcloud-dept #项目的名称
+  company.name: com.yan #公司的名称
+
+# 开启熔断降级 feign.hystrix
+feign:
+  hystrix:
+    enabled: true

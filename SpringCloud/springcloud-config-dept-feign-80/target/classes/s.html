@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+<button id="one">按钮</button>
+
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+<script>
+    $("#one").click(function () {
+        console.log(111);
+
+        $.post("http://localhost:8001/actuator/bus-refresh",function(result){
+            console.log(result)
+        })
+
+    })
+</script>
+</body>
+</html>

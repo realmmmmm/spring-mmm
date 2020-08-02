@@ -1,0 +1,39 @@
+package com.config;
+
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RandomRule;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+/**
+ * 使用RestTemplete先需要放入Spring容器中
+ *
+ * 还可以自定义规则，负载均衡，默认采用轮循放，
+ */
+@Configuration
+public class ConfigBean {
+
+
+    // 配置负载均衡实现RestTemplate
+    @LoadBalanced //配置负载均衡实现RestTemplate
+    @Bean
+    public RestTemplate getRestTemplate(){
+        return new RestTemplate();
+    }
+
+
+    /**
+     * IRule:
+     * RoundRobinRule 轮询
+     * RandomRule 随机
+     * AvailabilityFilteringRule ： 会先过滤掉，跳闸，访问故障的服务~，对剩下的进行轮询~
+     * RetryRule ： 会先按照轮询获取服务~，如果服务获取失败，则会在指定的时间内进行，重试
+     */
+//    @Bean
+//    public IRule myRule(){
+//        return new RandomRule();//使用随机规则
+//    }
+
+}

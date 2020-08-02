@@ -1,0 +1,22 @@
+# 系统级别的配置
+spring:
+  cloud:
+    config:
+      # 需要从git上读取的资源名称，不要后缀
+      name: config-dept
+      profile: dev
+      label: master
+      uri: http://localhost:3344
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: yanshengren
+
+# 暴露触发消息总线的地址
+# 消息总线，需要在要刷新类加上 @RefreshScope注解，更新远程git仓库地址，需要POST请求http://xxx:80/actuator/bus-refresh
+management:
+  endpoints:
+    web:
+     exposure:
+      include: bus-refresh
