@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>短信接口</title>
+    <meta name="keywords" content="短信接口">
+    <meta name="description" content="短信接口">
+
+</head>
+
+<body >
+
+    主页
+    <input type="text" placeholder="输入手机号" id="tel">
+    <button id="save">短信发送</button>
+
+</body>
+</html>
+
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+    $("#save").click(function () {
+        var tel = $("#tel").val();
+        console.log(tel);
+        var url = "send/"+ tel
+        $.post(url,function(result){
+
+            console.log(result);
+
+        })
+
+    })
+</script>

@@ -1,0 +1,37 @@
+server:
+  port: 8080
+spring:
+  #thymeleaf热部署关闭缓存
+  thymeleaf:
+    cache: false
+  #springboot 2.2.x 开启put delete等请求方式
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  datasource:
+    username: root
+    password: root
+    #mysql8版本以上的驱动包，需要指定以下时区
+    url: jdbc:mysql://127.0.0.1:3307/uc_verification?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #引入Druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+  #连接redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+#阿里云短信
+web:
+  ngari:
+    accessKey:
+      id: 阿里云账户
+      secret: 阿里云密码
+    signature: 签名
+    template: 模板
+#配置mybatis相关文件路径
+mybatis:
+  #映射配置文件路径
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  #核心配置文件路径
+  config-location: classpath:mybatis/mybatis-config.xml
