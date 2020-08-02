@@ -1,4 +1,4 @@
-# JavaProject
+# JavaProject 个人练习
 
 #### 介绍
 搭建Spring系列的程序，公开代码和资料，个人博客：http://goodysr.cn
