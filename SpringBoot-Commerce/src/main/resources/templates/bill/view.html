@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>账单管理系统</title>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<!--头部-->
+<header th:replace="main/public :: #publicHeader"></header>
+<!--时间-->
+<section th:replace="main/public :: #publicTime"></section>
+<!--主体内容-->
+<section class="publicMian ">
+    <div class="left" th:replace="main/public :: #publicMianLeft(nav='bill')"></div>
+    </div>
+    <div class="right">
+        <div class="location">
+            <strong>你现在所在的位置是:</strong>
+            <span>账单管理页面 >> 信息查看</span>
+        </div>
+        <div class="providerView">
+            <p><strong>帐单编号：</strong><span>[[${billVo.billCode}]]</span></p>
+            <p><strong>商品名称：</strong><span>[[${billVo.billName}]]</span></p>
+            <p><strong>商品单位：</strong><span>[[${billVo.billCom}]]</span></p>
+            <p><strong>商品数量：</strong><span>[[${billVo.billNum}]]</span></p>
+            <p><strong>总金额：</strong><span>[[${billVo.money}]]</span></p>
+            <p><strong>供应商：</strong><span>[[${billVo.providerName}]]</span></p>
+            <p><strong>是否付款：</strong><span>[[${billVo.pay==0?'未付款' :'已付款'}]]</span></p>
+            <p><strong>创建时间：</strong><span>[[${#dates.format(billVo.createDate, 'yyyy-MM-dd')}]]</span></p>
+
+            <a onclick="history.back(-1)" href="#">返回</a>
+        </div>
+    </div>
+</section>
+<footer class="footer" th:replace="main/public :: #footer"></footer>
+<script src="../js/jquery.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>账单管理系统</title>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<!--头部-->
+<header class="publicHeader" th:replace="main/public :: #publicHeader">
+</header>
+<!--时间-->
+<section class="publicTime" th:replace="main/public :: #publicTime">
+</section>
+<!--主体内容-->
+<section class="publicMian ">
+    <div class="left" th:replace="main/public :: #publicMianLeft(nav='provider')"></div>
+    <div class="right">
+        <div class="location">
+            <strong>你现在所在的位置是:</strong>
+            <span>供应商管理页面 >> 信息查看</span>
+        </div>
+        <div class="providerView" >
+            <p><strong>供应商编码：</strong><span>[[${provider.providerCode}]]</span></p>
+            <p><strong>供应商名称：</strong><span>[[${provider.providerName}]]</span></p>
+            <p><strong>联系人：</strong><span>[[${provider.people}]]</span></p>
+            <p><strong>联系电话：</strong><span>[[${provider.phone}]]</span></p>
+            <p><strong>传真：</strong><span>[[${provider.fax}]]</span></p>
+            <p><strong>描述：</strong><span>[[${provider.describe}]]</span></p>
+
+            <a href="/providers">返回</a>
+        </div>
+    </div>
+</section>
+<footer class="footer" th:replace="main/public :: #footer"></footer>
+<!--
+	<script src="js/time.js"></script>
+	-->
+</body>
+</html>
