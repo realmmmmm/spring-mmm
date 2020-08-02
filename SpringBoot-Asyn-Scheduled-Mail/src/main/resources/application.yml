@@ -1,0 +1,15 @@
+server:
+  port: 8088
+
+spring:
+  #邮箱配置文件
+  mail:
+    username: xxxx@qq.com
+    password: 密钥
+    #发送邮件服务器
+    host: smtp.qq.com
+    #ssl连接
+    properties:
+      smtp:
+        ssl:
+          enable: true
