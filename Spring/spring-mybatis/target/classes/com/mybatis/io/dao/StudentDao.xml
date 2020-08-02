@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.io.dao.StudentDao">
+
+    <!-- 多对一  复杂类型使用
+        property 实体类的字段   column 数据库里的字段
+        association 对象的处理
+        javaType  类型     select  查询返回的值
+
+        还可以这么写  一条sql语句查询
+        <association property="teacher" javaType="...Teacher">
+            <result property="id" column="tid"></result>
+            <result property="name" column="t_name"></result>
+        </association>
+    -->
+    <resultMap id="StudentAndTeacher" type="com.mybatis.io.entities.Student">
+        <result property="id" column="id"></result>
+        <result property="name" column="name"></result>
+        <association property="teacher" column="tid" javaType="com.mybatis.io.entities.Teacher" select="getTeacher">
+        </association>
+    </resultMap>
+    <select id="getStudentList" resultMap="StudentAndTeacher">
+        select * from student
+    </select>
+
+    <select id="getTeacher" resultType="com.mybatis.io.entities.Teacher">
+        select * from teacher
+        where id = #{id}
+    </select>
+
+
+    <!-- 一对多  复杂类型使用
+       collection  是集合
+       JavaType  用来指定实体类中的类型
+       ofType    用来指定映射到List或者集合中的pojo类型，泛型中的约束类型
+    -->
+    <resultMap id="TeacherAndStudent" type="com.mybatis.io.entities.Teacher">
+        <result property="id" column="tid"></result>
+        <result property="name" column="tname"></result>
+        <collection property="students"  ofType="com.mybatis.io.entities.Student">
+            <result property="id" column="id"></result>
+            <result property="name" column="name"></result>
+        </collection>
+    </resultMap>
+    <select id="getTeacherbyTid" resultMap="TeacherAndStudent">
+        select s.id, s.name , t.name tname, t.id tid
+        from student s JOIN teacher t on s.tid = t.id
+        where t.id = #{tid}
+    </select>
+
+</mapper>

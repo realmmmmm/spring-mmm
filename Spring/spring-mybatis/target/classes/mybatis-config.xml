@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+		PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!--configuration核心配置文件
+  https://blog.csdn.net/DDDDeng_/article/details/106927021
+  https://github.com/Donkequan/Mybatis-Study
+-->
+<configuration>
+
+	<!--引入外部配置文件-->
+	<properties resource="db.properties"/>
+
+	<!-- mybatis 配置
+	        mapUnderscoreToCamelCase  开启驼峰命令
+			logImpl   日志启动类型  SLF4J | LOG4J | LOG4J2 | JDK_LOGGING | COMMONS_LOGGING | STDOUT_LOGGING | NO_LOGGING
+	 		cacheEnabled   开启或关闭任何缓存
+	 		属性：
+	 		https://mybatis.org/mybatis-3/zh/configuration.html
+
+	 		开启缓存 cacheEnabled
+	 -->
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+		<setting name="logImpl" value="LOG4J"/>
+		<setting name="cacheEnabled" value="true"/>
+	</settings>
+
+	<!-- 类型别名  在Mapper中使用简称
+	<typeAliases>
+		<typeAlias type="com.mybatis.io.entities.User" alias="User"></typeAlias>
+	</typeAliases>
+	-->
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}"/>
+				<property name="url" value="${url}"/>
+				<property name="username" value="${username}"/>
+				<property name="password" value="${password}"/>
+			</dataSource>
+		</environment>
+	</environments>
+
+	<!--每一个mapper.xml都需要注册-->
+	<mappers>
+		<mapper class="com.mybatis.io.dao.UserDao"></mapper>
+		<mapper class="com.mybatis.io.dao.BilDao"></mapper>
+		<mapper class="com.mybatis.io.dao.StudentDao"></mapper>
+		<mapper class="com.mybatis.io.dao.TeacherDao"></mapper>
+<!--		<mapper class="com.mybatis.io.dao.TeacherDao"></mapper>-->
+<!--		<mapper resource="com/mybatis/io/dao/UserMapper.xml"/>-->
+	</mappers>
+
+</configuration>
+
+<!--
+Mybatis的配置文件
+configuration（配置）
+    properties（属性）
+    settings（设置）
+    typeAliases（类型别名）
+    typeHandlers（类型处理器）
+    objectFactory（对象工厂）
+    plugins（插件）
+    environments（环境配置）
+    	environment（环境变量）
+    		transactionManager（事务管理器）
+    		dataSource（数据源）
+    databaseIdProvider（数据库厂商标识）
+    mappers（映射器）
+-->

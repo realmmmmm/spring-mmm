@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.io.dao.UserDao">
+
+    <sql id="select-u">
+          id,
+          username,
+          real_name,
+          password,
+          gender,
+          birthday,
+          user_type
+    </sql>
+
+    <sql id="if-u-gender">
+        <if test="gender!=null">
+            and gender = #{gender}
+        </if>
+        <if test="userType!=null">
+            and user_type = #{userType}
+        </if>
+    </sql>
+
+    <select id="getUserList" resultType="com.mybatis.io.entities.User">
+        select * from user
+    </select>
+
+    <select id="getUserLike" resultType="com.mybatis.io.entities.User">
+        select * from user where username like "%"#{value}"%"
+    </select>
+
+
+    <resultMap id="getListMap" type="com.mybatis.io.entities.User">
+        <result column="tid" property="id" ></result>
+        <result column="real_name" property="realName" ></result>
+        <result column="birthday" property="birthday" ></result>
+        <result column="user_type" property="userType" ></result>
+    </resultMap>
+    <select id="getUserListMap" resultMap="getListMap">
+        select
+          id as tid,
+          username,
+          real_name,
+          password,
+          gender,
+          birthday,
+          user_type
+        from user
+    </select>
+
+    <select id="getUserPaging" resultType="com.mybatis.io.entities.User" parameterType="map">
+        select
+          <include refid="select-u"></include>
+        from user
+        limit #{startIndex},#{pageSize}
+    </select>
+
+    <select id="getUserIf" resultType="com.mybatis.io.entities.User" parameterType="int">
+        select * from user
+        <where>
+            <include refid="if-u-gender"/>
+        </where>
+    </select>
+
+    <select id="getUserChoose" resultType="com.mybatis.io.entities.User" parameterType="com.mybatis.io.entities.User">
+        select * from user
+        <where>
+            <choose>
+                <when test="gender!=null">
+                    gender = #{gender}
+                </when>
+                <when test="userType!=null">
+                    and user_type = #{userType}
+                </when>
+                <otherwise>
+                    and username = #{username}
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+
+    <update id="setUser" parameterType="com.mybatis.io.entities.User" >
+        update user
+        <set>
+            <if test="username!=null">
+                username = #{username},
+            </if>
+            <if test="gender!=null">
+                gender = #{gender},
+            </if>
+            <if test="userType!=null">
+                user_type = #{userType}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--
+        foreach
+        select * from user  where  id = 1 or id=2 or id =3
+        collection 集合名  item 子元素
+        open 前缀   open  后缀  separator  分隔符
+    -->
+    <select id="getUserByIdList" resultType="com.mybatis.io.entities.User" parameterType="int">
+        select * from user
+        <where>
+            <foreach collection="ids" item="id" open="(" close=")" separator="or">
+                id = #{id}
+            </foreach>
+        </where>
+    </select>
+
+</mapper>
