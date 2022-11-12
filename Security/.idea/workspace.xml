@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cf28974-4b7e-44d2-a747-2e627bb03e7d" name="Default Changelist" comment="" />
+    <list default="true" id="0cf28974-4b7e-44d2-a747-2e627bb03e7d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBootShiro/SpringBootShiro.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurity/SpringSecurity.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurity/src/main/java/com/config/Securityconfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringSecurity/src/main/java/com/config/Securityconfig.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,10 +27,24 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Environment/apache-maven-3.8.1" />
+        <option name="userSettingsFile" value="F:\Environment\apache-maven-3.8.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
   <component name="ProjectId" id="1eM1uIjNoIVhibPAA3MjD6IkyqI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -25,10 +52,12 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/SpringBootShiro/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SpringCloud" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -38,9 +67,17 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20689656" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\ideaProject\security\SpringBootShiro\src\main\resources\templates" />
+      <recent name="F:\ideaProject\security\SpringBootShiro\src\main\java\com\config\component" />
+      <recent name="F:\ideaProject\security\SpringBootShiro\src\main\java" />
+      <recent name="F:\ideaProject\security\SpringBootShiro\src\main\resources" />
+      <recent name="F:\ideaProject\security\SpringSecurity\src\main\java\com\common" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\ideaProject\security\SpringBootShiro\src\main\resources" />
     </key>
@@ -54,13 +91,13 @@
       <recent name="com.modules.entities" />
       <recent name="com.modules.controller" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\ideaProject\security\SpringBootShiro\src\main\resources\templates" />
-      <recent name="F:\ideaProject\security\SpringBootShiro\src\main\java\com\config\component" />
-      <recent name="F:\ideaProject\security\SpringBootShiro\src\main\java" />
-      <recent name="F:\ideaProject\security\SpringBootShiro\src\main\resources" />
-      <recent name="F:\ideaProject\security\SpringSecurity\src\main\java\com\common" />
-    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.SpringoneApplication (1)">
     <configuration name="BCrypt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -146,6 +183,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -161,80 +199,26 @@
       <workItem from="1594274015635" duration="16210000" />
       <workItem from="1594303080972" duration="3397000" />
       <workItem from="1594350433197" duration="15568000" />
+      <workItem from="1668231563808" duration="1155000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="552" y="185" key="#Project_Structure" timestamp="1594219397006">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="552" y="185" key="#Project_Structure/0.0.1920.1050@0.0.1920.1050" timestamp="1594219397006" />
-    <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594219561631">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1594219561631" />
-    <state x="954" y="215" key="#com.intellij.ide.util.MemberChooser" timestamp="1594357815255">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="954" y="215" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1594357815255" />
-    <state x="650" y="452" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1594219836721">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="650" y="452" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1594219836721" />
-    <state x="744" y="412" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1594219838844">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="744" y="412" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1050@0.0.1920.1050" timestamp="1594219838844" />
-    <state x="690" y="273" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594127561817">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="690" y="273" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1594127561817" />
-    <state width="1876" height="336" key="GridCell.Tab.0.bottom" timestamp="1594366819750">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1876" height="336" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1594366819750" />
-    <state width="1876" height="336" key="GridCell.Tab.0.center" timestamp="1594366819750">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1876" height="336" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1594366819750" />
-    <state width="1876" height="336" key="GridCell.Tab.0.left" timestamp="1594366819750">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1876" height="336" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1594366819750" />
-    <state width="1876" height="336" key="GridCell.Tab.0.right" timestamp="1594366819750">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1876" height="336" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1594366819750" />
-    <state width="1876" height="336" key="GridCell.Tab.1.bottom" timestamp="1594366819741">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1876" height="336" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1594366819741" />
-    <state width="1876" height="336" key="GridCell.Tab.1.center" timestamp="1594366819740">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1876" height="336" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1594366819740" />
-    <state width="1876" height="336" key="GridCell.Tab.1.left" timestamp="1594366819740">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1876" height="336" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1594366819740" />
-    <state width="1876" height="336" key="GridCell.Tab.1.right" timestamp="1594366819740">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1876" height="336" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1594366819740" />
-    <state x="463" y="156" key="SettingsEditor" timestamp="1594179745115">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="463" y="156" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1594179745115" />
-    <state x="330" y="228" key="new project wizard" timestamp="1594131886651">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="330" y="228" key="new project wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1594131886651" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1594299100296">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1594299100296" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

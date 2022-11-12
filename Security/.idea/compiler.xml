@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SpringBootShiro" />
         <module name="SpringSecurity" />
+        <module name="com.dream.blog" />
       </profile>
     </annotationProcessing>
   </component>

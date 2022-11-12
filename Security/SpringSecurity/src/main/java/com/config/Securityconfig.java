@@ -58,8 +58,7 @@ public class Securityconfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/level1/**").hasRole("manager")
                 .antMatchers("/level2/**").hasRole("emp")
                 .antMatchers("/level3/**").hasRole("boss")
-                .anyRequest().authenticated()
-                ;
+                .anyRequest().authenticated();
 
         //关闭csrf功能:跨站请求伪造,默认只能通过post方式提交logout请求
         http.csrf().disable();
