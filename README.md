@@ -1,9 +1,4 @@
-# JavaProject 个人练习
-
-#### 介绍
-搭建Spring系列的程序，公开代码和资料，个人博客：http://goodysr.cn
-
-#### 项目分类 （源码）
+## 项目分类 （源码）
 - Security工程： 安全框架的使用，SpringSecurity、Shiro
 - Spring工程： Spring的基础练习，AOP、Mybatis 整合
 - SpringBoot-Asyn-Scheduled-Mail工程： 异步操作/定时任务/邮件发送
